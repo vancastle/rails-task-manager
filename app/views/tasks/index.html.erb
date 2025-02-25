@@ -1,0 +1,11 @@
+<ul>
+  <% if @tasks.present? %>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new task", "/tasks/new" %>
+|
+<%= link_to "Back", tasks_path %>
